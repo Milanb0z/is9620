@@ -119,7 +119,7 @@
             </div>
             <div class="row gx-5 justify-content-center">
               <div class="col-lg-8 col-xl-6">
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm" class="requires-validation" novalidate>
                   <!-- Name input-->
                   <div class="form-floating mb-3">
                     <input
@@ -127,7 +127,7 @@
                       id="name"
                       type="text"
                       placeholder="Enter your name..."
-                      data-sb-validations="required"
+                      required
                     /><label for="name">Ime</label>
                     <div
                       class="invalid-feedback"
@@ -143,7 +143,7 @@
                       id="email"
                       type="email"
                       placeholder="name@example.com"
-                      data-sb-validations="required,email"
+                      required
                     /><label for="email">Email adresa</label>
                     <div
                       class="invalid-feedback"
@@ -165,12 +165,9 @@
                       id="phone"
                       type="tel"
                       placeholder="064-3324-232"
-                      data-sb-validations="required"
+                      required
                     /><label for="phone">Broj telefona</label>
-                    <div
-                      class="invalid-feedback"
-                      data-sb-feedback="phone:required"
-                    >
+                    <div class="invalid-feedback" required>
                       Broj telefona je obavezan.
                     </div>
                   </div>
@@ -182,7 +179,7 @@
                       type="text"
                       placeholder="Enter your message here..."
                       style="height: 10rem"
-                      data-sb-validations="required"
+                      required
                     ></textarea
                     ><label for="message">Poruka</label>
                     <div
@@ -196,7 +193,7 @@
                   <!-- Submit Button-->
                   <div class="d-grid">
                     <button
-                      class="btn btn-primary btn-lg disabled"
+                      class="btn btn-primary btn-lg"
                       id="submitButton"
                       type="submit"
                     >
@@ -272,6 +269,7 @@
         </div>
       </footer>
       <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js"></script>
     </main>
   </body>
 </html>
